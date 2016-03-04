@@ -1,17 +1,27 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="48" inline="false" x="52" y="25">
+  <block type="controls_whileUntil" id="1" inline="false" x="52" y="25">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_button" id="84">
+      <block type="sensor_button" id="2">
         <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="58">
+      <block type="movement_setmotors" id="51" inline="true">
+        <value name="BOTHMOVLEFT">
+          <block type="math_number" id="58">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+        <value name="BOTHMOVRIGHT">
+          <block type="math_number" id="59">
+            <field name="NUM">95</field>
+          </block>
+        </value>
         <next>
-          <block type="robot_delay" id="60" inline="true">
+          <block type="robot_delay" id="4" inline="true">
             <value name="DELAY">
-              <block type="math_number" id="67">
+              <block type="math_number" id="5">
                 <field name="NUM">100</field>
               </block>
             </value>
@@ -20,7 +30,7 @@
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="77"></block>
+      <block type="movement_stop" id="6"></block>
     </next>
   </block>
 </xml>
